@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- PAGE TITLE HERE -->
+    <title>Persetujuan</title>
+
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="images/chart.png">
+
+    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Datatable -->
+    <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Style Image -->
+    <style>
+        .zoomable {
+            width: 75px;
+            transition: all 0.5s;
+        }
+
+        .zoomable:hover {
+            transform: scale(1.5);
+        }
+
+        .noimage {
+            width: 75px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img src="images/PTI.png" width="40" height="40" viewbox="0 0 55 55" fill="non">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 0C12.3122 0 0 12.3122 0 27.5C0 42.6878 12.3122 55 27.5 55C42.6878 55 55 42.6878 55 27.5C55 12.3122 42.6878 0 27.5 0ZM28.0092 46H19L19.0001 34.9784L19 27.5803V24.4779C19 14.3752 24.0922 10 35.3733 10V17.5571C29.8894 17.5571 28.0092 19.4663 28.0092 24.4779V27.5803H36V34.9784H28.0092V46Z" fill="url(#paint0_linear)"></path>
+                <defs>
+                </defs>
+                </svg>
+                <div class="brand-title">
+                    <h2 class="">inventory</h2>
+                    <span class="brand-sub-title">Admin</span>
+                </div>
+            </a>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Chat box start
+        ***********************************-->
+
+        <!--**********************************
+            Chat box End
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header border-bottom">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="dashboard_bar">
+                                Data Persetujuan
+                            </div>
+                        </div>
+                        <ul class="navbar-nav header-right">
+
+                            <li class="nav-item dropdown  header-profile">
+                                <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
+                                    <img src="images/pp.png" width="56" alt="">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <button class="dropdown-item ai-icon" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                            <polyline points="16 17 21 12 16 7"></polyline>
+                                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                                        </svg>
+                                        <span class="ms-2">Logout </span>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="dlabnav">
+			<div class="dlabnav-scroll">
+				<ul class="metismenu" id="menu">
+					<li><a href="index.html" class="" aria-expanded="false">
+							<i class="bi bi-bar-chart-fill"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+					</li>
+					<li><a href="javascript:void()" class="has-arrow" aria-expanded="false">
+							<i class="fas fa-box"></i>
+							<span class="nav-text">Stock</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="stock.html">Stock Barang</a></li>
+							<li><a href="detail.html">Stock Detail</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void()" class="has-arrow" aria-expanded="false">
+							<i class="bi bi-cart-plus-fill"></i>
+							<span class="nav-text">Masuk & Keluar</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="masuk.html">Barang Masuk</a></li>
+							<li><a href="keluar.html">Barang Keluar</a></li>
+						</ul>
+					</li>
+					<li><a href="peminjaman.html" class="" aria-expanded="false">
+							<i class="bi bi-archive-fill"></i>
+							<span class="nav-text">Peminjaman Barang</span>
+						</a>
+					</li>
+					<li><a href="persetujuan.html" class="" aria-expanded="false">
+							<i class="fa fa-handshake"></i>
+							<span class="nav-text">Data Persetujuan</span>
+						</a>
+					</li>
+					<li><a href="datauser.html" class="" aria-expanded="false">
+							<i class="bi bi-people-fill"></i>
+							<span class="nav-text">Kelola Data User</span>
+						</a>
+					</li>
+                    <li><a href="../index.html" class="" aria-expanded="false">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <span class="nav-text"><strong>Kembali</strong></span>
+                    </a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+
+                <!-- Card Data -->
+                <div class="row">
+                    <div class="col">
+                        <div class="widget-stat card">
+                            <a href="persetujuan.html">
+                                <div class="card-body p-4">
+                                    <div class="media ai-icon">
+                                        <span class="me-3 bgl-primary text-primary">
+                                            <i class="bi bi-bar-chart-fill"></i>
+                                        </span>
+                                        <div class="media-body text-end">
+                                            <p class="mb-1"><strong>TOTAL REQUEST</strong></p>
+                                            <h3 class="text-primary">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="widget-stat card">
+                            <a href="pending.html">
+                                <div class="card-body p-4">
+                                    <div class="media ai-icon">
+                                        <span class="me-3 bgl-primary text-warning">
+                                            <i class="bi bi-hourglass-split"></i>
+                                        </span>
+                                        <div class="media-body text-end">
+                                            <p class="mb-1"><strong>TOTAL PENDING</strong></p>
+                                            <h3 class="text-warning">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="widget-stat card">
+                            <a href="disetujui.html">
+                                <div class="card-body p-4">
+                                    <div class="media ai-icon">
+                                        <span class="me-3 bgl-primary text-success">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </span>
+                                        <div class="media-body text-end">
+                                            <p class="mb-1"><strong>TOTAL DISETUJUI</strong></p>
+                                            <h3 class="text-success">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="widget-stat card">
+                            <a href="ditolak.html">
+                                <div class="card-body p-4">
+                                    <div class="media ai-icon">
+                                        <span class="me-3 bgl-primary text-danger">
+                                            <i class="fa fa-ban"></i>
+                                        </span>
+                                        <div class="media-body text-end">
+                                            <p class="mb-1"><strong>TOTAL DITOLAK</strong></p>
+                                            <h3 class="text-danger">0</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <!-- Button trigger modal -->
+                                <div></div>
+                                <div class="d-flex align-items-center project-tab">
+                                    <li class="nav-item dropdown notification_dropdown">
+                                        <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
+                                            <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.1666 5.83331H20.9999V3.49998C20.9999 3.19056 20.877 2.89381 20.6582 2.67502C20.4394 2.45623 20.1427 2.33331 19.8333 2.33331C19.5238 2.33331 19.2271 2.45623 19.0083 2.67502C18.7895 2.89381 18.6666 3.19056 18.6666 3.49998V5.83331H9.33325V3.49998C9.33325 3.19056 9.21034 2.89381 8.99154 2.67502C8.77275 2.45623 8.47601 2.33331 8.16659 2.33331C7.85717 2.33331 7.56042 2.45623 7.34163 2.67502C7.12284 2.89381 6.99992 3.19056 6.99992 3.49998V5.83331H5.83325C4.90499 5.83331 4.01476 6.20206 3.35838 6.85844C2.702 7.51482 2.33325 8.40506 2.33325 9.33331V10.5H25.6666V9.33331C25.6666 8.40506 25.2978 7.51482 24.6415 6.85844C23.9851 6.20206 23.0948 5.83331 22.1666 5.83331Z" fill="#717579"></path>
+                                                <path d="M2.33325 22.1666C2.33325 23.0949 2.702 23.9851 3.35838 24.6415C4.01476 25.2979 4.90499 25.6666 5.83325 25.6666H22.1666C23.0948 25.6666 23.9851 25.2979 24.6415 24.6415C25.2978 23.9851 25.6666 23.0949 25.6666 22.1666V12.8333H2.33325V22.1666Z" fill="#717579"></path>
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <div id="DZ_W_TimeLine02" class="widget-timeline dlab-scroll style-1 ps ps--active-y p-3 height265">
+                                                <form method="POST">
+                                                    <div class="mb-2 mt-3 mx-sm-3">
+                                                        <p class="mb-1">Tanggal Mulai</p>
+                                                        <input type="date" name="tgl_mulai" class="form-control">
+                                                    </div>
+                                                    <div class="mb-4 mx-sm-3">
+                                                        <p class="mb-1">Tanggal Selesai</p>
+                                                        <input type="date" name="tgl_selesai" class="form-control">
+                                                    </div>
+                                                    <div class="mb-2 mx-sm-3">
+                                                        <button type="submit" name="filter_tgl" class="btn btn-info">Filter Date Range</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <div class="dropdown ms-2">
+                                        <div class="btn-link" data-bs-toggle="dropdown">
+                                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.4999" cy="3.5" r="2.5" fill="#A5A5A5"></circle>
+                                                <circle cx="12.4999" cy="11.5" r="2.5" fill="#A5A5A5"></circle>
+                                                <circle cx="12.4999" cy="19.5" r="2.5" fill="#A5A5A5"></circle>
+                                            </svg>
+                                        </div>
+
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="export-data/export-ditolak.html" class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table text-dark" viewBox="0 0 16 16">
+                                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
+                                                </svg>
+                                                <span class="ms-2">Export</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                </div>
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example" class="display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Tanggal</th>
+                                                <th>Nama Barang</th>
+                                                <th>Jumlah</th>
+                                                <th>Username</th>
+                                                <th>Nama</th>
+                                                <th>Alasan</th>
+                                                <th>Status</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>2023-05-20</td>
+                                                        <td>Nama Barang</td>
+                                                        <td>10</td>
+                                                        <td>@id_user</td>
+                                                        <td>Pengaju</td>
+                                                        <td>alasan</td>
+                                                        <td>
+                                                            <span class="badge badge-lg light badge-warning"> Pending <span class="ms-2 fa fa-redo"></span></span>
+                                                            <!--<span class="badge badge-lg light badge-success"> Disetujui <span class="ms-2 fa fa-check"></span></span>-->
+                                                            <!--<span class="badge badge-lg light badge-danger"> Ditolak <span class="ms-2 fa fa-ban"></span></span>-->
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                    <button type="button" class="badge badge-lg light badge-success me-1" data-bs-toggle="modal" data-bs-target="#setuju">
+                                                                        <span class="fa fa-check"></span>
+                                                                    </button>
+                                                                    <button type="button" class="badge badge-lg light badge-danger" data-bs-toggle="modal" data-bs-target="#tolak">
+                                                                        <span class="fa fa-ban"></span>
+                                                                    </button>
+                                                                </div>
+                                                                    <!--<button type="button" class="btn btn-danger shadow btn-xs sharp" data-bs-toggle="modal" data-bs-target="#delete">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </button>-->
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Modal Setuju -->
+                                                    <div class="modal fade" id="setuju">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+
+                                                                <!-- Modal Header -->
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title">Konfirmasi Persetujuan</h4>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                </div>
+
+                                                                <!-- Modal body -->
+                                                                <form method="post">
+                                                                    <div class="modal-body">
+                                                                        <h4>Klik "YA" Untuk Mengkonfirmasi Persetujuan</h4>
+                                                                        <br><br>
+                                                                        <input type="hidden" name="id" value="<?php echo $id ?>">
+                                                                        <input type="hidden" name="nama_barang" value="<?php echo $nama_barang ?>">
+                                                                        <input type="hidden" name="tanggalrequest" value="<?php echo $tanggalrequest ?>">
+                                                                        <input type="hidden" name="qty" value="<?php echo $qty ?>">
+                                                                        <input type="hidden" name="pengaju" value="<?php echo $pengaju ?>">
+                                                                        <input type="hidden" name="alasan" value="<?php echo $alasan ?>">
+                                                                        <button type="submit" modal="footer" class="btn btn-success" name="setuju">YA</button>
+                                                                    </div>
+                                                                </form>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Modal Tolak -->
+                                                    <div class="modal fade" id="tolak">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+
+                                                                <!-- Modal Header -->
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title">Konfirmasi Penolakan</h4>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                </div>
+
+                                                                <!-- Modal body -->
+                                                                <form method="post">
+                                                                    <div class="modal-body">
+                                                                        <h4>Klik "YA" Untuk Mengkonfirmasi Penolakan</h4>
+                                                                        <br><br>
+                                                                        <input type="hidden" name="id" value="<?php echo $id ?>">
+                                                                        <input type="hidden" name="nama_barang" value="<?php echo $nama_barang ?>">
+                                                                        <input type="hidden" name="tanggalrequest" value="<?php echo $tanggalrequest ?>">
+                                                                        <input type="hidden" name="qty" value="<?php echo $qty ?>">
+                                                                        <input type="hidden" name="pengaju" value="<?php echo $pengaju ?>">
+                                                                        <input type="hidden" name="alasan" value="<?php echo $alasan ?>">
+                                                                        <button type="submit" modal="footer" class="btn btn-danger" name="tolak">YA</button>
+                                                                    </div>
+                                                                </form>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Delete Modal -->
+                                                    <div class="modal fade" id="delete">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h3 class="modal-title">Hapus Data Request?</h3>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                                    </button>
+                                                                </div>
+
+                                                                <form method="post">
+                                                                    <div class="modal-body">
+                                                                        <h4>Apakah Anda Yakin Ingin Menghapus Barang Request <?= $nama_barang; ?> Dari <?= $pengaju ?>?</h4>
+                                                                        <input type="hidden" name="id" value="<?= $id; ?>">
+                                                                    </div>
+
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-danger" name="hapusrequest">Hapus</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p class="text-light">SMKN 2 Bandung - XI RPL 1</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="vendor/global/global.min.js"></script>
+    <script src="vendor/chart.js/Chart.bundle.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="vendor/apexchart/apexchart.js"></script>
+
+    <!-- Datatable -->
+    <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="js/plugins-init/datatables.init.js"></script>
+
+    <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+    <script src="vendor/sweetalert/sweetalert2.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/dlabnav-init.js"></script>
+</body>
+
+<!-- Modal Logout -->
+<div class="modal fade" id="exampleModalCenter">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h1 align="center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-door-open-fill text-danger" viewBox="0 0 16 16">
+                                    <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                                </svg>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12">
+                            <h1 align="center">Logout</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 align="center" class="text-dark">Apakah anda yakin ingin Logout?</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary light" data-bs-dismiss="modal">Close</button>
+                <a href="#" type="button" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

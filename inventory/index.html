@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="robots" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- PAGE TITLE HERE -->
+	<title>Dashboard</title>
+
+	<!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/png" href="images/chart.png">
+
+	<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+	<link href="vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/nouislider/nouislider.min.css" rel="stylesheet" >
+
+	<!-- Card Request  -->
+	<link href="vendor/chartist/css/chartist.min.css" rel="stylesheet">
+
+	<!-- Custom Stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+	<!--*******
+        Preloader start
+    ********-->
+	<div id="preloader">
+		<div class="lds-ripple">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<!--*******
+        Preloader end
+    ********-->
+
+	<!--************
+        Main wrapper start
+    *************-->
+	<div id="main-wrapper">
+
+		<!--************
+            Nav header start
+        *************-->
+		<div class="nav-header">
+			<a href="index.html" class="brand-logo">
+				<img src="images/PTI.png" width="40" height="40" viewbox="0 0 55 55" fill="non">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M27.5 0C12.3122 0 0 12.3122 0 27.5C0 42.6878 12.3122 55 27.5 55C42.6878 55 55 42.6878 55 27.5C55 12.3122 42.6878 0 27.5 0ZM28.0092 46H19L19.0001 34.9784L19 27.5803V24.4779C19 14.3752 24.0922 10 35.3733 10V17.5571C29.8894 17.5571 28.0092 19.4663 28.0092 24.4779V27.5803H36V34.9784H28.0092V46Z" fill="url(#paint0_linear)"></path>
+				<defs>
+				</defs>
+				</svg>
+				<div class="brand-title">
+					<h2 class="">inventory</h2>
+					<span class="brand-sub-title">Admin</span>
+				</div>
+			</a>
+			<div class="nav-control">
+				<div class="hamburger">
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</div>
+			</div>
+		</div>
+		<!--************
+            Nav header start
+        *************-->
+
+		<!--****
+            Chat box start
+        *****-->
+		<div class="chatbox">
+			<div class="chatbox-close"></div>
+			<div class="custom-tab-1">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-bs-toggle="tab" href="#masuk"><i class="bi bi-cart-plus-fill mb-2"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#keluar"><i class="bi bi-cart-plus-fill mb-2"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#peminjaman"><i class="bi bi-archive-fill mb-2"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#request"><i class="fas fa-envelope mb-2"></i></i></a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active show" id="masuk" role="tabpanel">
+						<div class="card mb-sm-1 mb-md-0 note_card">
+							<div class="card-header text-center">
+								<div>
+									<h6 class="mb-0">History <strong>Barang Masuk</strong></h6>
+								</div>
+							</div>
+							<div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body1">
+								<ul class="contacts">
+
+										<li class="active">
+											<div class="d-flex bd-highlight">
+												<a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="fa fa-plus"></i></a>
+												<div class="user_info ms-2">
+													<h6>Hibban Menambahkan 10 Barang</h6>
+													<p>2023-05-20 19:46:12</p>
+												</div>
+											</div>
+										</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="keluar" role="tabpanel">
+						<div class="card mb-sm-1 mb-md-0 note_card">
+							<div class="card-header text-center">
+								<div>
+									<h6 class="mb-0">History <strong>Barang Keluar</strong></h6>
+								</div>
+							</div>
+							<div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body2">
+								<ul class="contacts">
+
+										<li class="active">
+											<div class="d-flex bd-highlight">
+												<a href="javascript:void(0);" class="btn btn-danger btn-xs sharp me-1"><i class="fa fa-minus"></i></a>
+												<div class="user_info ms-2">
+													<h6>Hibban Mengeluarkan 10 Barang</h6>
+													<p>2023-05-20 19:46:12</p>
+												</div>
+											</div>
+										</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="peminjaman" role="tabpanel">
+						<div class="card mb-sm-1 mb-md-0 note_card">
+							<div class="card-header text-center">
+								<div>
+									<h6 class="mb-0">History <strong>Peminjaman</strong></h6>
+
+								</div>
+							</div>
+							<div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body3">
+								<ul class="contacts">
+
+										<li class="active">
+											<div class="d-flex bd-highlight">
+												<a href="javascript:void(0);" class="btn btn-warning btn-xs sharp me-1"><i class="bi bi-hourglass-split"></i></a>
+												<div class="user_info ms-2">
+													<h6>Hibban Meminjam 10 Barang</h6>
+													<p>2023-05-20 19:46:12</p>
+												</div>
+											</div>
+										</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="request" role="tabpanel">
+						<div class="card mb-sm-1 mb-md-0 note_card">
+							<div class="card-header text-center">
+								<div>
+									<h6 class="mb-0">History <strong>Request Barang</strong></h6>
+								</div>
+							</div>
+							<div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body4">
+								<ul class="contacts">
+
+										<li class="active">
+											<div class="d-flex bd-highlight">
+												<a href="javascript:void(0);" class="btn btn-success btn-xs sharp me-1"><i class="fa fa-redo"></i></a>
+												<div class="user_info ms-2">
+													<h6>Hibban Merequest 10 Barang</h6>
+													<p>2023-05-20 19:46:12</p>
+												</div>
+											</div>
+										</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--****
+            Chat box End
+        *****-->
+
+		<!--************
+            Header start
+        *************-->
+		<div class="header border-bottom">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">
+								Dashboard
+							</div>
+						</div>
+						<ul class="navbar-nav header-right">
+
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link bell-link " href="javascript:void(0);">
+									<svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M23.3333 19.8333H23.1187C23.2568 19.4597 23.3295 19.065 23.3333 18.6666V12.8333C23.3294 10.7663 22.6402 8.75902 21.3735 7.12565C20.1068 5.49228 18.3343 4.32508 16.3333 3.80679V3.49996C16.3333 2.88112 16.0875 2.28763 15.6499 1.85004C15.2123 1.41246 14.6188 1.16663 14 1.16663C13.3812 1.16663 12.7877 1.41246 12.3501 1.85004C11.9125 2.28763 11.6667 2.88112 11.6667 3.49996V3.80679C9.66574 4.32508 7.89317 5.49228 6.6265 7.12565C5.35983 8.75902 4.67058 10.7663 4.66667 12.8333V18.6666C4.67053 19.065 4.74316 19.4597 4.88133 19.8333H4.66667C4.35725 19.8333 4.0605 19.9562 3.84171 20.175C3.62292 20.3938 3.5 20.6905 3.5 21C3.5 21.3094 3.62292 21.6061 3.84171 21.8249C4.0605 22.0437 4.35725 22.1666 4.66667 22.1666H23.3333C23.6428 22.1666 23.9395 22.0437 24.1583 21.8249C24.3771 21.6061 24.5 21.3094 24.5 21C24.5 20.6905 24.3771 20.3938 24.1583 20.175C23.9395 19.9562 23.6428 19.8333 23.3333 19.8333Z" fill="#717579"></path>
+										<path d="M9.9819 24.5C10.3863 25.2088 10.971 25.7981 11.6766 26.2079C12.3823 26.6178 13.1838 26.8337 13.9999 26.8337C14.816 26.8337 15.6175 26.6178 16.3232 26.2079C17.0288 25.7981 17.6135 25.2088 18.0179 24.5H9.9819Z" fill="#717579"></path>
+									</svg>
+								</a>
+							</li>
+
+							<li class="nav-item dropdown  header-profile">
+								<a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
+									<img src="images/pp.png" width="56" alt="">
+								</a>
+								<div class="dropdown-menu dropdown-menu-end">
+									<button class="dropdown-item ai-icon" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+											<polyline points="16 17 21 12 16 7"></polyline>
+											<line x1="21" y1="12" x2="9" y2="12"></line>
+										</svg>
+										<span class="ms-2">Logout </span>
+									</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--************
+            Header end ti-comment-alt
+        *************-->
+
+		<!--************
+            Sidebar start
+        *************-->
+		<div class="dlabnav">
+			<div class="dlabnav-scroll">
+				<ul class="metismenu" id="menu">
+					<li><a href="index.html" class="" aria-expanded="false">
+							<i class="bi bi-bar-chart-fill"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+					</li>
+					<li><a href="javascript:void()" class="has-arrow" aria-expanded="false">
+							<i class="fas fa-box"></i>
+							<span class="nav-text">Stock</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="stock.html">Stock Barang</a></li>
+							<li><a href="detail.html">Stock Detail</a></li>
+						</ul>
+					</li>
+					<li><a href="javascript:void()" class="has-arrow" aria-expanded="false">
+							<i class="bi bi-cart-plus-fill"></i>
+							<span class="nav-text">Masuk & Keluar</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="masuk.html">Barang Masuk</a></li>
+							<li><a href="keluar.html">Barang Keluar</a></li>
+						</ul>
+					</li>
+					<li><a href="peminjaman.html" class="" aria-expanded="false">
+							<i class="bi bi-archive-fill"></i>
+							<span class="nav-text">Peminjaman Barang</span>
+						</a>
+					</li>
+					<li><a href="persetujuan.html" class="" aria-expanded="false">
+							<i class="fa fa-handshake"></i>
+							<span class="nav-text">Data Persetujuan</span>
+						</a>
+					</li>
+					<li><a href="datauser.html" class="" aria-expanded="false">
+							<i class="bi bi-people-fill"></i>
+							<span class="nav-text">Kelola Data User</span>
+						</a>
+					</li>
+					<li><a href="../index.html" class="" aria-expanded="false">
+							<i class="bi bi-box-arrow-left"></i>
+							<span class="nav-text"><strong>Kembali</strong></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--************
+            Sidebar end
+        *************-->
+
+		<!--************
+            Content body
+        *************-->
+		<div class="content-body">
+			<!-- row -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="row">
+							<!-- Card Profile -->
+							<div class="col-xl-5">
+								<div class="row">
+									<div class="col-xl-12">
+										<div class="card tryal-gradient">
+											<div class="card-body tryal row">
+												<div class="col-xl-7 col-sm-6">
+													<h2>Welcome</h2>
+													<span><strong> Your Application Management Starts Now</strong></span>
+												</div>
+												<div class="col-xl-5 col-sm-6">
+													<img src="images/chart.png" alt="" class="sd-shape">
+												</div>
+											</div>
+										</div>
+									</div>
+
+										<div class="col-xl-12">
+											<div class="card overflow-hidden">
+												<div class="card-body mb-0">
+													<div class="text-center">
+														<div class="profile-photo">
+															<img src="images/pp.png" width="100" class="img-fluid rounded-circle" alt="">
+														</div>
+														<h3 class="mt-4 mb-1">Hibban Abdurrouf</h3>
+														<p class="text-muted mb-0">@hibbanmr</p>
+													</div>
+													<div class="card-footer border-0 mt-0">
+														<button type="button" class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#edit">
+															<i class="fa fa-bell-o"></i> Edit Profile
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Edit Modal -->
+										<div class="modal fade" id="edit">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h3 class="modal-title">Edit Profile</h3>
+														<button type="button" class="btn-close" data-bs-dismiss="modal">
+														</button>
+													</div>
+
+													<form method="post" enctype="multipart/form-data">
+														<div class="modal-body">
+															<label class="form-label ms-2">Name</label>
+															<input type="text" name="usernameuser" value="Hibban Abdurrouf" class="form-control form-control-lg" placeholder="Username" required>
+															<br>
+															<label class="form-label ms-2">Password</label>
+															<input type="password" name="passwordbaru" value="12345" class="form-control form-control-lg" placeholder="Password" required>
+															<br>
+															<label class="form-label ms-2">Photo Profile</label>
+															<div class="input-group mt-1">
+                                                                <div class="form-file">
+																	<input type="file" name="profile" class="form-file-input form-control">
+                                                                </div>
+                                                            </div>
+															<br>
+														</div>
+
+														<div class="modal-footer">
+															<button type="submit" class="btn btn-primary btn sweet-wrong" name="updateprofile">Submit</button>
+														</div>
+													</form>
+
+												</div>
+											</div>
+										</div>
+
+								</div>
+							</div>
+
+							<!-- Chart Stock -->
+							<div class="col-xl-7">
+								<div class="row">
+									<div class="col-xl-12">
+										<a href="stock.html">
+											<div class="card">
+												<div class="card-header border-0 flex-wrap">
+													<h4 class="fs-20 font-w700 mb-2">Stock Chart</h4>
+												</div>
+												<div class="card-body mb-4">
+													<div class="d-flex justify-content-between align-items-center flex-wrap">
+														<div class="d-flex">
+															<div class="d-flex me-5">
+																<div class="mt-2">
+																	<svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<circle cx="6.5" cy="6.5" r="6.5" fill="#886CC0"></circle>
+																	</svg>
+																</div>
+																<div class="ms-3">
+																	<h4 class="fs-24 font-w700 ">1407</h4>
+																	<span class="fs-16 font-w400 d-block">Total Stock</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<br>
+													<canvas id="barChart_1"></canvas>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Chart Masuk & Keluar -->
+							<div class="col-xl-6">
+								<div class="row">
+									<div class="col-xl-12">
+										<div class="card">
+											<div class="card-header border-0 flex-wrap">
+												<h4 class="fs-20 font-w700 mb-2">Chart - Barang Masuk & Keluar</h4>
+											</div>
+											<div class="card-body">
+												<div class="d-flex justify-content-between align-items-center flex-wrap">
+													<div class="d-flex">
+														<a href="masuk.html">
+															<div class="d-flex me-5">
+																<div class="mt-2">
+																	<svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<circle cx="6.5" cy="6.5" r="6.5" fill="#FFA26D"></circle>
+																	</svg>
+																</div>
+																<div class="ms-3">
+																	<h4 class="fs-24 font-w700 ">95</h4>
+																	<span class="fs-16 font-w400 d-block">Barang Masuk</span>
+																</div>
+															</div>
+														</a>
+														<a href="keluar.html">
+															<div class="d-flex">
+																<div class="mt-2">
+																	<svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<circle cx="6.5" cy="6.5" r="6.5" fill="#FF5ED2"></circle>
+																	</svg>
+
+																</div>
+																<div class="ms-3">
+																	<h4 class="fs-24 font-w700 ">89</h4>
+																	<span class="fs-16 font-w400 d-block">Barang Keluar</span>
+																</div>
+															</div>
+														</a>
+													</div>
+												</div>
+												<br>
+												<div class="tab-content">
+													<div class="tab-pane fade active show">
+														<div id="chartBar" class="chartBar"></div>
+													</div>
+													<div class="tab-pane fade" id="Weekly">
+														<div id="chartBar1" class="chartBar"></div>
+													</div>
+													<div class="tab-pane fade" id="Today">
+														<div id="chartBar2" class="chartBar"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Peminjaman & Request -->
+							<div class="col-xl-6">
+								<div class="row">
+
+									<!-- Dipinjam -->
+									<div class="col">
+										<div class="widget-stat card">
+											<a href="dipinjam.html">
+												<div class="card-body p-4">
+													<div class="media ai-icon">
+														<span class="me-3 bgl-primary text-warning">
+															<i class="bi bi-hourglass-split"></i>
+														</span>
+														<div class="media-body text-end">
+															<p class="mb-1"><strong>TOTAL DIPINJAM</strong></p>
+															<h3 class="text-warning">5</h3>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<!-- Kembali -->
+									<div class="col">
+										<div class="widget-stat card">
+											<a href="kembali.html">
+												<div class="card-body p-4">
+													<div class="media ai-icon">
+														<span class="me-3 bgl-primary text-success">
+															<i class="bi bi-check-circle-fill"></i>
+														</span>
+														<div class="media-body text-end">
+															<p class="mb-1"><strong>TOTAL KEMBALI</strong></p>
+															<h3 class="text-success">3</h3>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<!-- Request Persetujuan -->
+									<div class="col-xl-12 col-lg-12">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12">
+												<a href="persetujuan.html">
+													<div class="card">
+														<div class="card-header border-0">
+															<div>
+																<h4 class="fs-20 font-w700">Request Persetujuan</h4>
+															</div>
+														</div>
+														<div class="card-body">
+															<div id="animating-donut" class="ct-chart ct-golden-section chartlist-chart"></div>
+
+															<div class="mb-3 mt-4">
+															</div>
+
+															<div>
+																<a href="disetujui.html">
+																	<div class="d-flex align-items-center justify-content-between mb-4">
+																		<span class="fs-18 font-w500">
+																			<svg class="me-3" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="20" height="20" rx="6" fill="#09BD3C"></rect>
+																			</svg>
+																			Disetujui
+																		</span>
+																		<span class="fs-18 font-w600">20</span>
+																	</div>
+																</a>
+																<a href="ditolak.html">
+																	<div class="d-flex align-items-center justify-content-between  mb-4">
+																		<span class="fs-18 font-w500">
+																			<svg class="me-3" width="20" height="20" viewbox="0 0 20 20" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="20" height="20" rx="6" fill="#FF5ED2"></rect>
+																			</svg>
+																			Ditolak
+																		</span>
+																		<span class="fs-18 font-w600">20</span>
+																	</div>
+																</a>
+																<a href="pending.html">
+																	<div class="d-flex align-items-center justify-content-between  mb-4">
+																		<span class="fs-18 font-w500">
+																			<svg class="me-3" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="20" height="20" rx="6" fill="#FFCF6D"></rect>
+																			</svg>
+																			Pending
+																		</span>
+																		<span class="fs-18 font-w600">20</span>
+																	</div>
+																</a>
+															</div>
+
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--************
+            Content body end
+        *************-->
+
+		<!--************
+            Footer start
+        *************-->
+		<div class="footer">
+			<div class="copyright">
+				<p class="text-light">SMKN 2 Bandung - XI RPL 1</p>
+			</div>
+		</div>
+		<!--************
+            Footer end
+        *************-->
+
+	</div>
+	<!--************
+        Main wrapper end
+    *************-->
+
+	<!--************
+        Scripts
+    *************-->
+	<!-- Required vendors -->
+	<script src="vendor/global/global.min.js"></script>
+	<script src="vendor/chart.js/Chart.bundle.min.js"></script>
+	<script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+	<!-- Apex Chart -->
+	<script src="vendor/apexchart/apexchart.js"></script>
+
+	<!-- Chartist (Request) -->
+	<script src="vendor/chartist/js/chartist.min.js"></script>
+	<script src="vendor/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+	<script src="js/plugins-init/chartist-init.js"></script>
+
+	<!-- Chart ChartJS plugin files (Stock Chart) -->
+	<script src="js/plugins-init/chartjs-init.js"></script>
+
+	<!-- Chart piety plugin files (Chart Barang Masuk & Keluar) -->
+	<script src="vendor/peity/jquery.peity.min.js"></script>
+
+	<!-- Apex Chart -->
+	<script src="vendor/apexchart/apexchart.js"></script>
+
+	<!-- Chart piety plugin files -->
+	<script src="vendor/peity/jquery.peity.min.js"></script>
+
+	<!-- Dashboard 1 (Chart Barang Masuk & Keluar) -->
+	<script src="js/dashboard/dashboard-1.js"></script>
+
+	<script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+	<script src="js/custom.min.js"></script>
+	<script src="vendor/chart.js/Chart.bundle.min.js"></script>
+	<script src="js/dlabnav-init.js"></script>
+	<script>
+		function cardsCenter() {
+
+			/*  testimonial one function by = owl.carousel.js */
+
+
+
+			jQuery('.card-slider').owlCarousel({
+				loop: true,
+				margin: 0,
+				nav: true,
+				//center:true,
+				slideSpeed: 3000,
+				paginationSpeed: 3000,
+				dots: true,
+				navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+				responsive: {
+					0: {
+						items: 1
+					},
+					576: {
+						items: 1
+					},
+					800: {
+						items: 1
+					},
+					991: {
+						items: 1
+					},
+					1200: {
+						items: 1
+					},
+					1600: {
+						items: 1
+					}
+				}
+			})
+		}
+
+		jQuery(window).on('load', function() {
+			setTimeout(function() {
+				cardsCenter();
+			}, 1000);
+		});
+	</script>
+
+
+
+</body>
+
+
+<div class="modal fade" id="exampleModalCenter">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container">
+					<div class="row mb-3">
+						<div class="col-12">
+							<h1 align="center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-door-open-fill text-danger" viewBox="0 0 16 16">
+									<path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+								</svg>
+							</h1>
+						</div>
+					</div>
+					<div class="row mb-2">
+						<div class="col-12">
+							<h1 align="center">Logout</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h4 align="center" class="text-dark">Apakah anda yakin ingin Logout?</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary light" data-bs-dismiss="modal">Close</button>
+				<a href="#" type="button" class="btn btn-danger">Logout</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</html>
